@@ -3,25 +3,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="choose-conditions.css">
+    <script src="choose-cond.js" charset="utf-8"></script>
     <title>Choose Medical Conditions</title>
   </head>
   <body>
     <h1 class="header">Choose Your Medical Conditions</h1>
     <div class="conditions-list">
       <ul class="list-group">
-        <p><button type="button" name="button" class="condList">+</button>  Diabetes</p>
-        <p><button type="button" name="button"class="condList">+</button>  Heart Disease</p>
-        <p><button type="button" name="button"class="condList">+</button>  Kidney Disease</p>
-        <p><button type="button" name="button"class="condList">+</button>  Asthma</p>
-        <p><button type="button" name="button"class="condList">+</button>  Depression</p>
-        <p><button type="button" name="button"class="condList">+</button>  Anxiety</p>
-        <p><button type="button" name="button"class="condList">+</button>  Eating Disorder</p>
-        <p><button type="button" name="button"class="condList">+</button>  Schizophrenia</p>
-        <p><button type="button" name="button"class="condList">+</button>  Addiction</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Diabetes")>+</button>  Diabetes</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Heart-Disease")>+</button>  Heart Disease</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Kidney-Disease")>+</button>  Kidney Disease</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Asthma")>+</button>  Asthma</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Depression")>+</button>  Depression</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Anxiety")>+</button>  Anxiety</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Eating-Disorder")>+</button>  Eating Disorder</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Schizophrenia")>+</button>  Schizophrenia</p>
+        <p><button type="button" name="button"class="condList" onclick=addCond("Addiction")>+</button>  Addiction</p>
       </ul>
     </div>
     <div class="submit-div">
-      <button type="button" name="button"class="submit-button">Submit</button>
+      <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
     </div>
+    <p id="added-conditions">Display selected conditions</p>
   </body>
 </html>
