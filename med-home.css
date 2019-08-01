@@ -22,3 +22,11 @@
 .add-cond {
   text-align: center;
 }
+.warning {
+  border-color: #ff9800;
+  color: orange;
+}
+.warning:hover {
+  background: #ff9800;
+  color: white;
+}
