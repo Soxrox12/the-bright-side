@@ -23,12 +23,3 @@
 .add-cond {
   text-align: center;
 }
-.btn-gradient.yellow {
-	background: rgba(240,210,100,1);
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(240,210,100,1)), to(rgba(229,201,96,1)));
-	background: -webkit-linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
-	background: -moz-linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
-	background: -o-linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
-	background: linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0d264', endColorstr='#e5c960', GradientType=0 );
-}
