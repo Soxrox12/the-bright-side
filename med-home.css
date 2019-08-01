@@ -1,4 +1,4 @@
-.web-header {
+.web-header{
   width: 500%;
   margin-left: 0;
   margin-right: 0;
@@ -6,19 +6,19 @@
 }
 .header {
   text-align: center;
-  font-family: fanstasy;
-  color: black;
+  font-family: fantasy;
+  color: olive;
 }
-.buttons {
+.med-buttons {
   position: relative;
   top: 50%;
-  text-align: left;
+  text-align: center;
   color: #EBCAA4;
 }
-a:link {
+#med-btn {
   text-decoration: none;
-  color: black;
+  color: olive;
 }
 .add-cond {
-  text-align: left;
+  text-align: center;
 }
