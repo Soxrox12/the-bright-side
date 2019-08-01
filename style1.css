@@ -1,0 +1,54 @@
+<style type="text/css">
+
+h2 {
+text-align: center;
+font-size: 22px
+}
+
+form {
+font-size: 22px;
+/*
+Title font color
+*/
+color: #EF974F;
+}
+
+input {
+display: block;
+clear: both;
+}
+
+fieldset {
+margin: 1em 180;
+border-style: none;
+/*
+Background color for input info box
+*/
+background-color: #EF974F;
+color: White;
+}
+label input {
+display: block;
+color: #FFF6A9;
+}
+body {
+background: white;
+}
+
+img {
+  border-radius: 50%;
+}
+
+button {
+  background-color: #FEF4A4;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+</style>
