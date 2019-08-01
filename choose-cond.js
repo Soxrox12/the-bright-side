@@ -1,10 +1,14 @@
 var conditions = [];
 //add new condition to list
+//function changeColor() {
+  //document.getElementsByClassName("condList").style.backgroundColor="#CADBAE";}
+function setColor(id) {
+  document.getElementById(id).style.backgroundColor = "#CADBAE";
+}
 function addCond(condition) {
   if (conditions.length == 0) {
     conditions.push(condition);
   }
-
   for (i=0; i<conditions.length; i++) {
     console.log(condition == conditions[i]);
     if (condition == conditions[i]) {
