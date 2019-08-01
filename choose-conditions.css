@@ -1,8 +1,8 @@
 .header {
-  text-align: center;
   font-family: fantasy;
   font-size: 40px;
   color: olive;
+  text-align: center;
 }
 p {
   color: #D1825B;
@@ -13,7 +13,26 @@ p {
 }
 .submit-div {
   text-align: center;
+  height: 35px;
 }
 .submit-button {
   height: 35px;
+  width: 75px;
+}
+ button {
+   background-color: #1E3815;
+   font-weight: bold;
+   color: white;
+ }
+
+button:hover {
+  background-color: #9795A3;
+}
+
+button:visited {
+  background-color: #E5BA22;
+}
+
+body {
+  background-image: url("tbs-header.jpg");
 }
