@@ -7,23 +7,34 @@
     <title>Choose Medical Conditions</title>
   </head>
   <body>
-    <h1 class="header">Choose Your Medical Conditions</h1>
-    <div class="conditions-list">
-      <ul class="list-group">
-        <p><button type="button" name="button"class="condList" onclick=addCond("Diabetes")>+</button>  Diabetes</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Heart-Disease")>+</button>  Heart Disease</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Kidney-Disease")>+</button>  Kidney Disease</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Asthma")>+</button>  Asthma</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Depression")>+</button>  Depression</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Anxiety")>+</button>  Anxiety</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Eating-Disorder")>+</button>  Eating Disorder</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Schizophrenia")>+</button>  Schizophrenia</p>
-        <p><button type="button" name="button"class="condList" onclick=addCond("Addiction")>+</button>  Addiction</p>
-      </ul>
+    <div class="bkd-img">
+      <h1 class="header">Choose Your Medical Conditions</h1>
+      <div class="conditions-list">
+        <ul class="list-group">
+          <p><button type="button" id="dB" onclick="setColor('dB')" name="button" class="condList" onclick="addCond('Diabetes')">+</button>  Diabetes</p>
+
+          <p><button type="button"id="hd" onclick="setColor('hd')" name="button"class="condList" onclick="addCond('Heart-Disease')">+</button>  Heart Disease</p>
+
+          <p><button type="button" id="kD" onclick="setColor('kD')" name="button"class="condList" onclick="addCond('Kidney-Disease')">+</button>  Kidney Disease</p>
+
+          <p><button type="button" id="asthma" onclick="setColor('asthma')" name="button"class="condList" onclick="addCond('Asthma')">+</button>  Asthma</p>
+
+          <p><button type="button" id="depression" onclick="setColor('depression')" name="button"class="condList" onclick="addCond('Depression')">+</button>  Depression</p>
+
+          <p><button type="button" id="anxiety" onclick="setColor('anxiety')" name="button"class="condList" onclick="addCond('Anxiety')">+</button>  Anxiety</p>
+
+          <p><button type="button" id="eD" onclick="setColor('eD')" name="button"class="condList" onclick="addCond('Eating-Disorder')">+</button>  Eating Disorder</p>
+
+          <p><button type="button" id="schiz" onclick="setColor('schiz')" name="button"class="condList" onclick="addCond('Schizophrenia')">+</button>  Schizophrenia</p>
+
+          <p><button type="button" id="addict" onclick="setColor('addict')" name="button"class="condList" onclick="addCond('Addiction')">+</button>  Addiction</p>
+
+        </ul>
+      </div>
+      <div class="submit-div">
+        <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
+      </div>
+      <p id="added-conditions">Display selected conditions</p>
     </div>
-    <div class="submit-div">
-      <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
-    </div>
-    <p id="added-conditions">Display selected conditions</p>
   </body>
 </html>
