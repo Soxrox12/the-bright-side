@@ -1,0 +1,20 @@
+body{
+  background-color: #EBCAA4;
+  background-image: none;
+}
+# change colors when done w/ everything else.
+
+p{
+  font-size: 1em;
+  line-height: 1.25em;
+  font-style: italic;
+}
+
+h1,h2,h3 p{
+  color: white;
+  text-decoration:nonw;
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
