@@ -1,5 +1,8 @@
 .header {
   text-align: center;
+  font-family: fantasy;
+  font-size: 40px;
+  color: olive;
 }
 p {
   color: #D1825B;
