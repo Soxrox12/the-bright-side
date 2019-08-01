@@ -7,7 +7,7 @@
 .header {
   text-align: center;
   font-family: fantasy;
-  color: olive;
+  color: black;
 }
 .med-buttons {
   position: relative;
@@ -17,7 +17,7 @@
 }
 #med-btn {
   text-decoration: none;
-  color: olive;
+  color: black;
 }
 .add-cond {
   text-align: center;
