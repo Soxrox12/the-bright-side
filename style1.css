@@ -41,7 +41,7 @@ img {
   border-radius: 50%;
 }
 
-button {
+.create-acct-btn {
   background-color: #FEF4A4;
   border: none;
   color: white;
