@@ -1,5 +1,5 @@
 /* Bordered form */
-form {
+.login-form {
   border: 3px solid #f1f1f1;
 }
 
@@ -14,7 +14,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.login-pg-btns {
   background-color: #Ef974F;
   color: white;
   padding: 14px 20px;
@@ -25,7 +25,7 @@ button {
 }
 
 /* Add a hover effect for buttons */
-button:hover {
+.login-pg-btns:hover {
   opacity: 0.8;
 }
 
