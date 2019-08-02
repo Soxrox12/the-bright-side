@@ -1,0 +1,166 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link rel="stylesheet" href="questionpage.css">
+</head>
+<script>
+  function showquestion() {
+    console.log("showquestion");
+    document.getElementById("question2").style.display = "block";
+  }
+
+  function showquestion2() {
+    console.log("showquestion2");
+    document.getElementById("question3").style.display = "block";
+  }
+  function showquestion3() {
+    console.log("showquestion3");
+    document.getElementById("question4").style.display = "block";
+  }
+</script>
+<body bgcolor="#85C1E9">
+    <center><h1>Welcome!<h1></center>
+    <br>
+    <center><form>
+      <div id="question1">
+      Describe your day in one word: <input type="text" name="name">
+      <button type="button" class="file-submit"onclick=showquestion()>Next</button>
+
+      </div>
+    </form></center>
+    <center><form>
+      <div id="question2">
+      Why did you choose this word? What happened today?:
+      <br>
+      <textarea>
+      </textarea>
+      <button type="button" class="file-submit"onclick=showquestion2()>Next</button>
+      </div>
+      <br>
+      <br>
+      <div id="question3">
+      Assign a color for your day:
+      <br>
+      <br>
+      <font color="FCFCD2">Yellow (happy/excited)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <font color="D2FCD4">Green (average)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <font color="E3D2FC">Purple (annoyed)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <font color="FCD2D2">Red (anger)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <font color="D2E3FC">Blue (sad)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <font color="FCF0D2">Orange (anxious)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <font color="FFFFFF">White (sad/tired)</font><input type = "radio" id = "mc" name = "question2"><br>
+      <button type="button" class="file-submit"onclick=showquestion3()>Next</button>
+      </div>
+      <br>
+      <br>
+      <div id="filesubmit">
+        <div id="question4">
+          Would you like to upload a memory from today? (optional):
+          <button type="button"
+          onclick="document.getElementById('demo').innerHTML = 'Click Submit'">
+          Skip:</button>
+          <p id="demo"></p>
+          <input type="file" id="input" multiple onchange="thumb(this.files)"> <hr/>
+          <script type="text/javascript">
+              function thumb(files) {
+
+                  if (files == null || files == undefined) {
+                      document.write("This Browser has no support for HTML5 FileReader yet!");
+                      return false;
+                  }
+
+                  for (var i = 0; i < files.length; i++) {
+                      var file = files[i];
+                      var imageType = /image.*/;
+
+                      if (!file.type.match(imageType)) {
+                          continue;
+
+                      }
+
+                      var reader = new FileReader();
+
+                      if (reader != null) {
+
+                          reader.onload = GetThumbnail;
+                          reader.readAsDataURL(file);
+                      }
+
+
+                  }
+              }
+
+              function GetThumbnail(e) {
+                  var myCan = document.createElement('canvas');
+                  var img = new Image();
+                  img.src = e.target.result;
+                  img.onload = function () {
+
+                      myCan.id = "myTempCanvas";
+                      // var tsize = document.getElementById("txtThumbSize").value;
+                      // myCan.width = myCan.naturalWidth;
+                      // myCan.height = myCan.naturalHeight;
+                      if (myCan.getContext) {
+                          var cntxt = myCan.getContext("2d");
+                          cntxt.drawImage(img, 0, 0, myCan.width, myCan.height);
+                          var dataURL = myCan.toDataURL();
+
+
+                          if (dataURL != null && dataURL != undefined) {
+                              var nImg = document.createElement('img');
+                              nImg.src = dataURL;
+                              document.body.appendChild(nImg);
+
+                          }
+                          else
+                              alert('unable to get context');
+
+                      }
+
+                  }
+
+              }
+          </script>
+
+
+          <button type="button" class="file-submit"onclick=showquestion4()>SUBMIT</button>
+        </div>
+      </div>
+    </form></center>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Displaying text when clicked</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = 'These are the steps to get your PIN number: Bla bla bla'">
+PIN button:</button>
+
+<p id="demo"></p>
+
+
+</br>
+</br><
+</br>
+
+<a onclick="showText('text1')" href="javascript:void(0);">PIN link:</a>
+
+<script language="JavaScript">
+   function showText(id)
+    {
+        document.getElementById(id).style.display = "block";
+    }
+</script>
+
+<div id="text1" style="display:none;">These are the steps to get your PIN number: Bla bla bla</div>
+
+</body>
+</html> -->
