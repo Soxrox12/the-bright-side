@@ -30,22 +30,28 @@
         height: 100%;
       }
 
-      #Home {background-color: #FFF7AD;}
+      #Home {
+        background-color: #FFF7AD;
+      }
       #Mental {background-color: #85C1E9;}
       #Medical {background-color: #2ECC71;}
       #About {background-color: #D7BDE2;}
       /* #F5B041 */
+      ##header-img {
+        width: 100%;
+        height: auto;
+      }
       </style>
   </head>
   <body>
-    <button class="tablink" onclick="openPage('Home', this, '#FFF7AD')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Home', this, '#FFF7AD')">Home</button>
     <button class="tablink" onclick="openPage('Mental', this, '#85C1E9')">Mental Health</button>
-    <button class="tablink" onclick="openPage('Medical', this, '#2ECC71')">Medical Info</button>
+    <button class="tablink" onclick="openPage('Medical', this, '#2ECC71')"id="defaultOpen">Medical Info</button>
     <button class="tablink" onclick="openPage('About', this, '#D7BDE2')">About</button>
 
     <div id="Home" class="tabcontent">
       <center>
-        <img src="tbs-header.jpg" height="625" width="1250">
+        <img src="tbs-header.jpg" id="header-img">
       </center>
     </div>
 
