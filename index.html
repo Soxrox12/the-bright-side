@@ -44,7 +44,20 @@ body, html {
   padding: 100px 20px;
   height: 225%;
 }
+.login-pg-btns {
+  background-color: #Ef974F;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
+/* Add a hover effect for buttons */
+.login-pg-btns:hover {
+  opacity: 0.8;
+}
 #Home {background-color: #FFF7AD;}
 #Mental {background-color: #85C1E9;}
 #Medical {background-color: #2ECC71;}
@@ -60,7 +73,7 @@ body, html {
 
 <div id="Home" class="tabcontent">
   <center>
-    <button><a href="login_page.html">Login</a></button>
+    <button class="login-pg-btns"><a href="login_page.html">Login</a></button>
     <img src="tbs-header.jpg" height="625" width="1250">
   </center>
 </div>
@@ -69,21 +82,23 @@ body, html {
  <center>
    <h1 class="header">Mental Health</h1>
    <p><button><a href="cal.html">Year in Pixels</a></button></p>
-   <p><button>Evaluate a Situation</button></p>
+   <p><button><a href="questionpage.html">Evaluate a Situation</a></button></p>
    <p><button><a href="resources.html">Resources<a></button></p>
   </center>
 </div>
 
 <div id="Medical" class="tabcontent">
-  <h1 class="header">Medical Info</h1>
-    <div>
-      <p class="med-buttons"><button type="button" name="heart rate">Heart Rate</button></p>
-      <p class="med-buttons"><button type="button" name="diet">Diet</button></p>
-      <p class="med-buttons"><button type="button" name="resources"><a href="medresources.html">Resources</a></button></p>
-    </div>
-    <div class="add-cond">
-      <h3><button type="button" name="add med cond" id="med-btn"><a href="choose-conditions.html">Add Medical Conditions</a></button></h3>
-    </div>
+  <center>
+    <h1 class="header">Medical Info</h1>
+      <div>
+        <p class="med-buttons"><button type="button" name="heart rate">Heart Rate</button></p>
+        <p class="med-buttons"><button type="button" name="diet">Diet</button></p>
+        <p class="med-buttons"><button type="button" name="resources"><a href="medresources.html">Resources</a></button></p>
+      </div>
+      <div class="add-cond">
+        <h3><button type="button" name="add med cond" id="med-btn"><a href="choose-conditions.html">Add Medical Conditions</a></button></h3>
+      </div>
+  </center>
 </div>
 
 <div id="About" class="tabcontent">
