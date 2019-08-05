@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="choose-conditions.css">
     <script src="choose-cond.js" charset="utf-8"></script>
+    <script src="add-hr.js" charset="utf-8"></script>
     <title>Choose Medical Conditions</title>
     <style>
       html {
@@ -117,6 +118,9 @@
         <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
         <p>     <b>Discretion: </b>We are not doctors and cannot diagnose users of this website.</p>
       </div>
+      <p>X Value:<input id="xValue" type="number" step="any" placeholder="Enter X-Value"></p>
+      <p>Y Value:<input id="yValue" type="number" step="any" placeholder="Enter Y-Value"></p>
+      <button id="renderButton">Add DataPoints &amp; Render Chart</button>
     </div>
       </body>
 </html>
