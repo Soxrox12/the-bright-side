@@ -3,12 +3,57 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="choose-conditions.css">
-    <script src="choose-cond.js" charset="utf-8"></script>
-    <script src="add-hr.js" charset="utf-8"></script>
+    <!--<script src="choose-cond.js" charset="utf-8"></script>-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+      var inputArr = [
+        ['Day', 'Heart Rate'],
+      ];
+      console.log(inputArr);
+
+      // function addInputData(){
+      //   xValue = Number(document.getElementById('xValue').value);
+      //   //<!--yValue = Number(document.getElementById('yValue').value);-->
+      //
+      //   inputArr.push(
+      //      xValue
+      //   //<!--   y: yValue-->
+      //    );
+      //    console.log(inputArr);
+      //    drawChart();
+      //    console.log("Drawing chart");
+       // return inputArr;
+      //}
+
+      // function drawChart() {
+      //   xValue = Number(document.getElementById('xValue').value);
+      //   yValue = Number(document.getElementById('yValue').value);
+      //   data.push({
+      //      x: xValue,
+      //      y: yValue
+      //  });
+
+      function drawChart(){
+        var new_data = [document.getElementById('xValue').value,
+                        parseInt(document.getElementById('yValue').value)]
+        inputArr.push(new_data);
+        var data = google.visualization.arrayToDataTable(inputArr);
+        // var sampleData = new google.visualization.DataTable(inputArr);
+        // data.addColumn('BPM');
+        // data.addRow([xValue]);
+        var options = {
+          title: 'Heart Rate Trends',
+          //curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+
     </script>
     <title>Choose Medical Condition</title>
     <style>
@@ -104,30 +149,24 @@
 
     <div class="bkd-img">
       <h1 class="header">Log New Heart Rate</h1>
-      <div class="user-inputs">
-        <div class="input-date">
-          <p>Choose the Date  <br /> <input type="date" value="yyyy-mm-dd" class="input-medium search-query" onkeypress="return false"></p>
-        </div>
-        <div class="input-time">
-          <p>Choose the Time  <br /> <input type="time" name="usr_time"class="input-medium search-query" onkeypress="return false"></p>
-        </div>
-        <div class="input-time">
-          <p>Enter your Current Heart Rate  <br /> <input type="number" placeholder="Enter Your Heart Rate"name="heart-rate"></p>
-        </div>
-      </div>
+
       <div class="pulse-instructions">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BSlRvD-CZSo"
         frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
       </div>
-
-      <div class="submit-div">
-        <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
+    </div>
+    <div class="user-inputs">
+      <div class="input-date">
+        <p>Choose the Date:<input id="xValue" type="date" step="any" placeholder="Choose the date"></p>
+      </div>
+      <div class="input-time">
+        <p>Enter Your Current Heart Rate:<input id="yValue" type="number" step="any" placeholder="Enter heart rate"></p>
       </div>
     </div>
-    <p>X Value:<input id="xValue" type="number" step="any" placeholder="Enter X-Value"></p>
-    <p>Y Value:<input id="yValue" type="text" step="any" placeholder="Enter date as mm/dd"></p>
-    <button id="renderButton" type="button" onclick="addInputData()">Add DataPoints and Render Chart</button>
+
+
+    <button id="renderButton" type="submit" onclick="drawChart()">Update Chart with Inputs</button>
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
   </body>
 </html>
