@@ -8,17 +8,32 @@ function setColor(id) {
 function addCond(condition) {
   if (conditions.length == 0) {
     conditions.push(condition);
+    return;
   }
   for (i=0; i<conditions.length; i++) {
-    console.log(condition == conditions[i]);
     if (condition == conditions[i]) {
       return;
     }
     else {
       conditions.push(condition);
+      return;
     }
   }
 }
+
+// function newCondition() {
+//   var newbtn = document.createElement("BUTTON");
+//   var newbtnText = document.createElement("p");
+//   newbtnText.innerText = ;
+//   newbtn.style.color = '';
+//   newbtn.style.height = '25px';
+//   newbtn.style.width = '25px';
+//   newbtn.style.color = 'white';
+//   newbtn.innerHTML = "+";
+//   document.getElementById('cond-list').appendChild(newbtn);
+//   document.getElementById('cond-list').appendChild(newbtnText);
+//
+// }
 
 // function addCond() {
 //   if (conditions.length == 0) {

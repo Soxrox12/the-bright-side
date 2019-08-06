@@ -19,6 +19,10 @@ p {
 .condList {
   height: 25px;
 }
+
+.create-acct-btn {
+  color: white;
+}
 .submit-div {
   text-align: center;
   height: 35px;
@@ -27,7 +31,7 @@ p {
   height: 35px;
   width: 75px;
 }
- button {
+button {
    background-color: #1E3815;
    font-weight: bold;
    color: white;

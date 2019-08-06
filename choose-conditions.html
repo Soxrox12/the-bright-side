@@ -6,8 +6,9 @@
     <script src="choose-cond.js" charset="utf-8"></script>
     <title>Choose Medical Conditions</title>
     <style>
-      a {   
-         color: black;   
+      a {
+         color: white;
+         font-weight: normal;
       }
       a:active {
          color: blue;
@@ -16,15 +17,15 @@
          color:blue;
          outline: none;
       }
-    
+
       body{
         background-image: url("medical-bkgd.jpg");
       }
-  
+
       #Home {
         background-image: url("medical-bkgd.jpg");
       }
-   
+
       ##header-img {
         width: 100%;
         height: auto;
@@ -34,9 +35,9 @@
   <body>
 
     <div class="bkd-img">
-      <button type="button" name="button" class="create-acct-btn"><a href="https://soxrox12.github.io/the-bright-side/">Home</a></button>
+      <button type="button" name="button" class="create-acct-btn"><a href="https://soxrox12.github.io/the-bright-side/" >Home</a></button>
       <h1 class="header">Choose Your Medical Conditions</h1>
-      <div class="conditions-list">
+      <div class="conditions-list" id="cond-list">
         <ul class="list-group">
           <p><button type="button" id="dB" onclick="setColor('dB'); addCond('Diabetes');" name="button" class="condList">+</button>  Diabetes</p>
 
@@ -55,8 +56,9 @@
           <p><button type="button" id="schiz" onclick="setColor('schiz');addCond('Schizophrenia')" name="button"class="condList">+</button>  Schizophrenia</p>
 
           <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p>
-
-          <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p>
+          <p>Ability to add your own conditions coming soon!</p>
+          <!-- <p> <input type="text"id="myText" placeholder="Type your own condition"><button type="button" name="button" id="newCond" onclick="newCondition()">Add Condition</button> </p> -->
+          <!-- <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p> -->
           <!-- <p><button type="button" id="userCond" onclick="setColor('userCond');addCond(myText.value)" name="button"class="condList">+</button>  <input type="text" id="myText" placeholder="Type your own condition ">  </p> -->
 
         </ul>
