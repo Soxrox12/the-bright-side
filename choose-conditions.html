@@ -6,6 +6,9 @@
     <script src="choose-cond.js" charset="utf-8"></script>
     <title>Choose Medical Conditions</title>
     <style>
+      body{
+        background-image: url("medical-bkgd.jpg");
+      }
       .tablink {
         background-color: #FDFEFE;
         color: black;
@@ -31,7 +34,7 @@
       }
 
       #Home {
-        background-color: #FFF7AD;
+        background-image: url("medical-bkgd.jpg");
       }
       #Mental {background-color: #85C1E9;}
       #Medical {background-color: #2ECC71;}
@@ -50,6 +53,7 @@
     <button class="tablink" onclick="openPage('About', this, '#D7BDE2')">About</button>
 
     <div id="Home" class="tabcontent">
+      <style="background-image: url('paper.gif')"></style>
       <center>
         <img src="tbs-header.jpg" id="header-img">
       </center>
@@ -62,7 +66,7 @@
     </div>
 
     <div id="Medical" class="tabcontent">
-      <h3><a href="med-home.html">Medical Info</a></h3>
+      <!--<h3><a href="med-home.html">Medical Info</a></h3>-->
       <p>Get in touch, or swing by for a cup of coffee.</p>
     </div>
 
@@ -113,6 +117,9 @@
           <p><button type="button" id="schiz" onclick="setColor('schiz');addCond('Schizophrenia')" name="button"class="condList">+</button>  Schizophrenia</p>
 
           <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p>
+
+          <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p>
+          <!-- <p><button type="button" id="userCond" onclick="setColor('userCond');addCond(myText.value)" name="button"class="condList">+</button>  <input type="text" id="myText" placeholder="Type your own condition ">  </p> -->
 
         </ul>
       </div>
