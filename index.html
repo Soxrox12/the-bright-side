@@ -59,106 +59,6 @@ body, html {
 .login-pg-btns:hover {
   opacity: 0.8;
 }
- 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
-
-$btn-width: 100px !default;
-$btn-height: 80px !default;
-$btn-full: $btn-height+$btn-width !default;
-$btn-half: $btn-full/2 !default;
-$bg-color: #eeeeee !default;
-
-html {
-  padding-top: 50px;
-  font-family: 'Open Sans', Helvetica, arial, sans-serif;
-  text-align: center;
-  background-color: $bg-color;
-
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    transition: 0.5s ease-in-out;
-  }
-
-  i,em,
-  b,strong,
-  span {
-    transition: none;
-  }
-}
-
-*:before,
-*:after {
-  z-index: -1;
-}
-
-h1,
-h4 {
-  font-family: 'Raleway', 'Open Sans', sans-serif;
-  margin: 0;
-  line-height: 1;
-}
-
-a {
-  text-decoration: none;
-  line-height: $btn-height;
-  color: black;
-}
-
-.centerer {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 1rem
-}
-
-@media (min-width: 600px) {
-  .wrap {
-    width: 50%;
-    float: left;
-  }
-}
-
-[class^="btn-"] {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  @include size(100%, $btn-height);
-  max-width: $btn-width;
-  margin: 1rem auto;
-  text-transform: uppercase;
-  border: 1px solid currentColor;
-}
-  
-.btn-6 {
-  $btn-color: random-color($max:200);
-  $btn-color-dark: shade($btn-color, 40%);
-	color: tint($btn-color);
-  
-  span {
-    @include absolute();
-    display: block;
-    @include size(0);
-    border-radius: 50%;
-    background-color: $btn-color-dark;
-    transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-  }
-  
-  &:hover {
-    color: tint($btn-color, 75%);
-    
-    span {
-      @include size(225%, $btn-width*2.25);
-    }
-  }
-  
-  &:active {
-    background-color: yellow;
-  }
-}
 
 #Home {background-color: #FFF7AD;}
 #Mental {background-color: #85C1E9;}
@@ -183,11 +83,9 @@ a {
 <div id="Mental" class="tabcontent">
  <center>
    <h1 class="header">Mental Health</h1>
-   <!-- <p><button><a href="cal.html">Year in Pixels</a></button></p> -->
-	<p><a href="cal.html" class="btn-6" href="#">Year in Pixels<span></span></a></p>
-   <!-- <p><button><a href="questionpage.html">Evaluate a Situation</a></button></p> -->
-   <!-- <p><button><a href="resources.html" class="btn-6" href="#">View Helpful Resources<a></button></p> -->
-	<p><a href="resources.html" class="btn-6" href="#">View Helpful Resources<span></span></a></p>
+   <p><button><a href="cal.html">Year in Pixels</a></button></p>
+   <!--<p><button><a href="questionpage.html">Evaluate a Situation</a></button></p>-->
+   <p><button><a href="resources.html" class="btn-6" href="#">View Helpful Resources<a></button></p>
   </center>
 </div>
 
@@ -195,10 +93,9 @@ a {
   <center>
     <h1 class="header">Medical Info</h1>
       <div>
-        <!--<p class="med-buttons"><button type="button" name="heart rate"><a href="add-hr.html">Log New Heart Rate</a></button></p>
+        <p class="med-buttons"><button type="button" name="heart rate"><a href="add-hr.html">Log New Heart Rate</a></button></p>
         <p class="med-buttons"><button type="button" name="diet"><a href="diet.html">Go To Diet Page</a></button></p>
         <p class="med-buttons"><button type="button" name="resources"><a href="medresources.html">View Helpful Resources</a></button></p>
-     --><p>
       </div>
       <div class="add-cond">
         <h3><button type="button" name="add med cond" id="med-btn"><a href="choose-conditions.html">Add Medical Conditions</a></button></h3>
@@ -209,7 +106,7 @@ a {
 <div id="About" class="tabcontent">
  <center>
    <h1 class="header">About</h1>
-   <p><a href="creators.html" class="btn-6" href="#">The Creators<span></span></a></p>
+   <p><button<a href="creators.html">The Creators</a></button></p>
    <p> The Bright Side helps teenagers track and prioritize their mental and physical health. Mental illness in teens is rising at a rapid pace, and physical disorders in teens are often overlooked. Being a teenager is stressful, and we want to encourage healthy and accessible coping mechanisms before adulthood.</p>
    <br>
    <img style="padding: 0 15px; float; center;" src="teen_stats.jpg" height="400" width="400">
