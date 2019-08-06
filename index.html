@@ -59,7 +59,39 @@ body, html {
 .login-pg-btns:hover {
   opacity: 0.8;
 }
+  
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+}
 
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+  
 #Home {background-color: #FFF7AD;}
 #Mental {background-color: #85C1E9;}
 #Medical {background-color: #2ECC71;}
@@ -76,7 +108,7 @@ body, html {
 <div id="Home" class="tabcontent">
   <center>
     <img src="tbs-header.jpg" width="1200" height="570">
-    <button class="login-pg-btns" class="btn-6" href="#"><a href="login_page.html">Login</a></button>
+    <button class="btn"><a href="login_page.html">Login</a></button>
   </center>
 </div>
 
@@ -85,7 +117,7 @@ body, html {
    <h1 class="header">Mental Health</h1>
    <p><button><a href="cal.html">Year in Pixels</a></button></p>
    <!--<p><button><a href="questionpage.html">Evaluate a Situation</a></button></p>-->
-   <p><button><a href="resources.html" class="btn-6" href="#">View Helpful Resources<a></button></p>
+   <p><button><a href="resources.html">View Helpful Resources<a></button></p>
   </center>
 </div>
 
