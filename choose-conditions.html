@@ -6,11 +6,37 @@
     <script src="choose-cond.js" charset="utf-8"></script>
     <title>Choose Medical Conditions</title>
     <style>
-      html {
-        background: url(medical-bkgd.jpg) no-repeat center fixed; 
-        background-size: cover;
+      .tablink {
+        background-color: #FDFEFE;
+        color: black;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
       }
-     
+
+      .tablink:hover {
+        background-color: #FDFEFE;
+      }
+
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        color: black;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+      }
+
+      #Home {
+        background-color: #FFF7AD;
+      }
+      #Mental {background-color: #85C1E9;}
+      #Medical {background-color: #2ECC71;}
+      #About {background-color: #D7BDE2;}
+      /* #F5B041 */
       ##header-img {
         width: 100%;
         height: auto;
@@ -18,29 +44,75 @@
       </style>
   </head>
   <body>
-    <button type="button" name="button" class="create-acct-btn"><a href="https://soxrox12.github.io/the-bright-side/">Home</a></button>
+    <button class="tablink" onclick="openPage('Home', this, '#FFF7AD')"><a href="https://soxrox12.github.io/the-bright-side/">Home</a></button>
+    <button class="tablink" onclick="openPage('Mental', this, '#85C1E9')">Mental Health</button>
+    <button class="tablink" onclick="openPage('Medical', this, '#2ECC71')"id="defaultOpen">Medical Info</button>
+    <button class="tablink" onclick="openPage('About', this, '#D7BDE2')">About</button>
+
+    <div id="Home" class="tabcontent">
+      <center>
+        <img src="tbs-header.jpg" id="header-img">
+      </center>
+    </div>
+
+    <div id="Mental" class="tabcontent">
+      <h3>Mental Health</h3>
+      <h4>Year in Pixels</h4>
+      <p></p>
+    </div>
+
+    <div id="Medical" class="tabcontent">
+      <h3><a href="med-home.html">Medical Info</a></h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+
+    <p>     <b>Discretion: </b>We are not doctors and cannot diagnose users of this website.</p>
+
+    <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
 
     <div class="bkd-img">
       <h1 class="header">Choose Your Medical Conditions</h1>
       <div class="conditions-list">
         <ul class="list-group">
-          <p><button type="button" id="dB" onclick="setColor('dB')" name="button" class="condList" onclick="addCond('Diabetes')">+</button>  Diabetes</p>
+          <p><button type="button" id="dB" onclick="setColor('dB'); addCond('Diabetes');" name="button" class="condList">+</button>  Diabetes</p>
 
-          <p><button type="button"id="hd" onclick="setColor('hd')" name="button"class="condList" onclick="addCond('Heart-Disease')">+</button>  Heart Disease</p>
+          <p><button type="button"id="hd" onclick="setColor('hd'); addCond('Heart-Disease')" name="button"class="condList">+</button>  Heart Disease</p>
 
-          <p><button type="button" id="kD" onclick="setColor('kD')" name="button"class="condList" onclick="addCond('Kidney-Disease')">+</button>  Kidney Disease</p>
+          <p><button type="button" id="kD" onclick="setColor('kD'); addCond('Kidney-Disease')" name="button"class="condList">+</button>  Kidney Disease</p>
 
-          <p><button type="button" id="asthma" onclick="setColor('asthma')" name="button"class="condList" onclick="addCond('Asthma')">+</button>  Asthma</p>
+          <p><button type="button" id="asthma" onclick="setColor('asthma');addCond('Asthma')" name="button"class="condList">+</button>  Asthma</p>
 
-          <p><button type="button" id="depression" onclick="setColor('depression')" name="button"class="condList" onclick="addCond('Depression')">+</button>  Depression</p>
+          <p><button type="button" id="depression" onclick="setColor('depression');addCond('Depression')" name="button"class="condList">+</button>  Depression</p>
 
-          <p><button type="button" id="anxiety" onclick="setColor('anxiety')" name="button"class="condList" onclick="addCond('Anxiety')">+</button>  Anxiety</p>
+          <p><button type="button" id="anxiety" onclick="setColor('anxiety');addCond('Anxiety')" name="button"class="condList">+</button>  Anxiety</p>
 
-          <p><button type="button" id="eD" onclick="setColor('eD')" name="button"class="condList" onclick="addCond('Eating-Disorder')">+</button>  Eating Disorder</p>
+          <p><button type="button" id="eD" onclick="setColor('eD');addCond('Eating-Disorder')" name="button"class="condList">+</button>  Eating Disorder</p>
 
-          <p><button type="button" id="schiz" onclick="setColor('schiz')" name="button"class="condList" onclick="addCond('Schizophrenia')">+</button>  Schizophrenia</p>
+          <p><button type="button" id="schiz" onclick="setColor('schiz');addCond('Schizophrenia')" name="button"class="condList">+</button>  Schizophrenia</p>
 
-          <p><button type="button" id="addict" onclick="setColor('addict')" name="button"class="condList" onclick="addCond('Addiction')">+</button>  Addiction</p>
+          <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p>
 
         </ul>
       </div>
@@ -48,9 +120,6 @@
         <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
       </div>
       <p id="added-conditions">Display selected conditions</p>
-      <p><b>Discretion: </b>We are not doctors and cannot diagnose users of this website.</p>
-
     </div>
-   
   </body>
 </html>
