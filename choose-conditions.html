@@ -57,16 +57,19 @@
 
           <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p>
           <p>Ability to add your own conditions coming soon!</p>
+          <p> <input type="text"id="myText" placeholder="Type your own condition"><button type="button" name="button" >Add Condition</button> </p>
+
           <!-- <p> <input type="text"id="myText" placeholder="Type your own condition"><button type="button" name="button" id="newCond" onclick="newCondition()">Add Condition</button> </p> -->
-          <!-- <p><button type="button" id="addict" onclick="setColor('addict');addCond('Addiction')" name="button"class="condList">+</button>  Addiction</p> -->
-          <!-- <p><button type="button" id="userCond" onclick="setColor('userCond');addCond(myText.value)" name="button"class="condList">+</button>  <input type="text" id="myText" placeholder="Type your own condition ">  </p> -->
+
+          <!-- <p><button type="button" id="userCond" onclick="setColor('userCond');addCond(myText.value)" name="button"class="condList">+</button>  <input type="text" id="myText" placeholder="Type your own condition ">  </p>  -->
 
         </ul>
       </div>
       <div class="submit-div">
-        <button type="button" name="button"class="submit-button" onclick=displayList()>Submit</button>
+        <button type="button" name="button"class="submit-button" onclick="displayList(); insert()">Submit</button>
       </div>
       <p id="added-conditions">Display selected conditions</p>
+
     </div>
   </body>
 </html>
