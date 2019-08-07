@@ -13,14 +13,12 @@
 </head>
 <style>
 * {box-sizing: border-box}
-
 /* Set height of body and the document to 100% */
 body, html {
   height: 100%;
   margin: 0;
   font-family: arial;
 }
-
 /* Style tab links */
 .tablink {
   background-color: #FDFEFE;
@@ -33,11 +31,9 @@ body, html {
   font-size: 17px;
   width: 25%;
 }
-
 .tablink:hover {
   background-color: #FDFEFE;
 }
-
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: black;
@@ -54,25 +50,22 @@ body, html {
   cursor: pointer;
   width: 100%;
 }
-
 /* Add a hover effect for buttons */
 .login-pg-btns:hover {
   opacity: 0.8;
 }
-  
+
 /* Container needed to position the button. Adjust the width as needed */
 .container {
   position: relative;
   width: 100%;
   height: 600;
 }
-
 /* Make the image responsive */
 .container img {
   width: 100%;
   height: 600;
 }
-
 /* Style the button and place it in the middle of the container/image */
 .container .btn {
   position: absolute;
@@ -88,24 +81,21 @@ body, html {
   cursor: pointer;
   border-radius: 5px;
 }
-
 .container .btn:hover {
   background-color: white;
 }
-  
-a {   
-    color: black;   
-}
 
+a {
+    color: black;
+}
 a:active {
     color: blue;
 }
-
 a[tabindex]:focus {
     color:blue;
     outline: none;
 }
-  
+
 #Home {background-color: #FFF7AD;}
 #Mental {background-color: #85C1E9;}
 #Medical {background-color: #2ECC71;}
@@ -133,10 +123,16 @@ a[tabindex]:focus {
 <div id="Mental" class="tabcontent">
  <center>
    <h1 class="header">Mental Health</h1>
-   <p><button><a href="cal.html">Year in Pixels</a></button></p>
+   <figure style="float: center;">
+   <button><a href="cal.html"><img src="calendarpic.jpg" height="200" width="200"></a></button>
+   <figcaption>Year in Pixels</figcaption>
+   </figure>
    <!--<p><button><a href="questionpage.html">Evaluate a Situation</a></button></p>-->
-   <p><button><a href="resources.html">View Helpful Resources<a></button></p>
-  </center>
+   <figure style="float: center;">
+   <button><a href="resources.html"><img src="resourcespic.jpg" height="200" width="200"><a></button>
+   <figcaption>View Helpful Resources</figcaption>
+   </figure>
+ </center>
   <br>
   <br>
   <br>
@@ -224,7 +220,6 @@ function openPage(pageName,elmnt,color) {
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
 }
-
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
