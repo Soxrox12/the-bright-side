@@ -1,15 +1,18 @@
-#question2 {
+#q2 {
   display:none;
 }
-#question3 {
+#q3 {
   display:none;
 }
 #question4 {
   display:none;
 }
+#question5 {
+  display:none;
+}
 
 
 body
-#mc {
+.mc {
 	display: inline;
 }
