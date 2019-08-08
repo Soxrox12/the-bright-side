@@ -46,10 +46,3 @@ function clearandshow() {
   messagebox.innerHTML += "Mood: " + color.join(", ") + "<br/>";
 
 }
-
-
-// function displayanswers(){
-//   for(i=0; i<answers.length; i++) {
-//     document.getElementById("added-answers").innerHTML = answers.toString().split(",").join("<br />");
-//   }
-// }
