@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/Soxrox12/the-bright-side/blob/master/favicon_io%20(3)/apple-touch-icon.png?raw=true">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/Soxrox12/the-bright-side/blob/master/favicon_io%20(3)/favicon-32x32.png?raw=true">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/Soxrox12/the-bright-side/blob/master/favicon_io%20(3)/favicon-16x16.png?raw=true">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!--<link rel="stylesheet" href="cool_button.css">
+  <link rel="stylesheet" href="med-home.css">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="test.css">
+  <script src="upload.js"></script>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js"></script>
+-->
+</head>
+<style>
+* {box-sizing: border-box}
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: arial;
+}
+/* Style tab links */
+.tablink {
+  background-color: #FDFEFE;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+.tablink:hover {
+  background-color: #FDFEFE;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 500%;
+}
+.login-pg-btns {
+  background-color: #Ef974F;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* Add a hover effect for buttons */
+.login-pg-btns:hover {
+  opacity: 0.8;
+}
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 100%;
+  height: 600;
+}
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: 600;
+}
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.container .btn:hover {
+  background-color: white;
+}
+a {
+    color: black;
+}
+a:active {
+    color: blue;
+}
+a[tabindex]:focus {
+    color:blue;
+    outline: none;
+}
+#Home {background-color: #FFF7AD;}
+#Mental {background-color: #85C1E9;}
+#Medical {background-color: #2ECC71;}
+#About {background-color: #D7BDE2;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, '#FFF7AD')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Mental', this, '#85C1E9')">Mental Health</button>
+<button class="tablink" onclick="openPage('Medical', this, '#2ECC71')">Medical Info</button>
+<button class="tablink" onclick="openPage('About', this, '#D7BDE2')">About</button>
+
+<div id="Home" class="tabcontent">
+  <center>
+    <div class="container">
+    <img src="tbs-header.jpg" width="1200" height="570">
+    <button class="btn"><a href="login_page.html">Login</a></button>
+    </div>
+  </center>
+  <br>
+  <p><b>Disclaimer: </b>We are not doctors and cannot diagnose users of this website.</p>
+</div>
+
+<div id="Mental" class="tabcontent">
+  <center>
+   <h1 class="header">Mental Health</h1>
+   <button><a href="cal.html">Year in Pixels</a></button><br><br>
+   <button><a href="resources.html">View Helpful Resources<a></button>
+  </center>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p><b>Disclaimer: </b>We are not doctors and cannot diagnose users of this website.</p>
+</div>
+
+<div id="Medical" class="tabcontent">
+  <center>
+      <div>
+        <p class="med-buttons"><button type="button" name="heart rate"><a href="add-hr.html">Log New Heart Rate</a></button></p>
+        <p class="med-buttons"><button type="button" name="diet"><a href="diet.html">Go To Diet Page</a></button></p>
+        <p class="med-buttons"><button type="button" name="resources"><a href="medresources.html">View Helpful Resources</a></button></p>
+      </div>
+      <div class="add-cond">
+        <h3><button type="button" name="add med cond" id="med-btn"><a href="choose-conditions.html">Add Medical Conditions</a></button></h3>
+    </div>
+  </center>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <p><b>Disclaimer: </b>We are not doctors and cannot diagnose users of this website.</p>
+</div>
+
+<div id="About" class="tabcontent">
+ <center>
+   <h1 class="header">About</h1>
+   <p><button><a href="creators.html">The Creators</a></button></p>
+   <p> The Bright Side helps teenagers track and prioritize their mental and physical health. Mental illness in teens is rising at a rapid pace, and physical disorders in teens are often overlooked. Being a teenager is stressful, and we want to encourage healthy and accessible coping mechanisms before adulthood.</p>
+   <br>
+   <img style="padding: 0 15px; float; center;" src="teen_stats.jpg" height="400" width="400">
+   <img style="padding: 0 15px; float; center;" src="teens_stats2.jpg" height="400" width="300">
+  </center>
+  <br>
+ <p><b>Disclaimer: </b>We are not doctors and cannot diagnose users of this website.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
